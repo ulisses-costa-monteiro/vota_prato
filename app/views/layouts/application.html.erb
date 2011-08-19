@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Programa de Qualificação de Restaurantes</title>
+	<%= stylesheet_link_tag 'scaffold' %>
+	<%= javascript_include_tag :defaults %>
+	<%= csrf_meta_tag %>
+</head>
+<body>
+	<%= menu_principal %>
+	<p style="color: green"><%= flash[ :notice ] %></p>
+	<%= yield %>
+	<script type="text/javascript">
+		<%= yield :js %>
+	</script>
+</body>
+</html>

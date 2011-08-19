@@ -1,0 +1,23 @@
+<h1>Listing nomes</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @nomes.each do |nome| %>
+  <tr>
+    <td><%= nome.nome %></td>
+    <td><%= link_to 'Show', nome %></td>
+    <td><%= link_to 'Edit', edit_nome_path(nome) %></td>
+    <td><%= link_to 'Destroy', nome, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Nome', new_nome_path %>
